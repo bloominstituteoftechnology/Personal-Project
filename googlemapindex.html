@@ -37,8 +37,15 @@
       zoom: 12, 
       mapTypeId: google.maps.MapTypeId.ROADMA
       };
-      var map = new google.maps.Map(document.getElementById('map'), {
-        });
+     /* Weather */
+     var weatherLayer = new google.maps.weather.WeatherLayer({
+           temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+          });
+          
+         weatherLayer.setMap(map);
+
+         var cloudLayer = new google.maps.weather.CloudLayer();
+         cloudLayer.setMap(map);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
