@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { COmponent } from 'react';
 
 class ChildComponent extends Component {
     constructor() {

@@ -1,0 +1,24 @@
+{
+  "name": "place-search",
+  "version": "0.0.0",
+  "server": false,
+  "private": true,
+  "scripts": {
+    "test": "",
+    "build": ""
+  },
+  "dependencies": {
+    "nodemon": "latest",
+    "turbo360": "latest",
+    "vertex360": "latest"
+  },
+  "devDependencies": {
+    "express": "latest",
+    "rimraf": "latest"
+  },
+  "app": "TURBO_APP_ID",
+  "deploy": [
+    "."
+  ],
+  "format": "vertex"
+}

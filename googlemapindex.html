@@ -23,6 +23,8 @@
     <div id="map"></div>
     <script>
       var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      Map.data.addGeoJson(...);
+      Map.data.setStyle(...); 
         
       var markerOptions = {
           position: new google.maps.LatLng(42.4668, -70.9495),
@@ -35,7 +37,7 @@
       var mapOptions = {
       center: new google.maps.LatLng(37.7831, -122.4039),
       zoom: 12, 
-      mapTypeId: google.maps.MapTypeId.ROADMA
+      mapTypeId: google.maps.MapTypeId.ROADMAP
       };
      /* Weather */
      var weatherLayer = new google.maps.weather.WeatherLayer({
