@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Google Map</h1>
+    <div id="map"></div>
+    <script>
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      Map.data.addGeoJson(...);
+      Map.data.setStyle(...); 
+        
+      var markerOptions = {
+          position: new google.maps.LatLng(42.4668, -70.9495),
+      
+      };
+      // Add marker 
+      var marker = new google.maps.Marker(markerOptions);
+      marker.setMap(map);
+      
+      var mapOptions = {
+      center: new google.maps.LatLng(37.7831, -122.4039),
+      zoom: 12, 
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+     /* Weather */
+     var weatherLayer = new google.maps.weather.WeatherLayer({
+           temperatureUnits: google.maps.weather.TemperatureUnit.FAHRENHEIT
+          });
+          
+         weatherLayer.setMap(map);
+
+         var cloudLayer = new google.maps.weather.CloudLayer();
+         cloudLayer.setMap(map);
+      }
+    </script>
+    <script src="AIzaSyAwplZmrjyvw8p4E7TWCquJ5yDgL26eoqg"
+    async defer></script>
+  </body>
+</html>
